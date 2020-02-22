@@ -3,7 +3,9 @@ import {
   SET_LOADING,
   LOGS_ERROR,
   ADD_LOG,
-  DELETE_LOGS
+  DELETE_LOGS,
+  SET_CURRENT,
+  CLEAR_CURRENT
 } from './types';
 
 // export const getLogs = () => {
@@ -57,6 +59,21 @@ export const deleteLog = id => async dispatch => {
       payload: err.response.data
     });
   }
+};
+
+// set current log
+export const setCurrent = log => {
+  return {
+    type: SET_CURRENT,
+    payload: log
+  };
+};
+
+// clear current log
+export const clearCurrent = () => {
+  return {
+    type: CLEAR_CURRENT
+  };
 };
 
 // set loading to true
