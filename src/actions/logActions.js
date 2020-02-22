@@ -144,7 +144,7 @@ export const searchLogs = text => async dispatch => {
     const data = await res.json();
 
     dispatch({
-      type: GET_LOGS,
+      type: SEARCH_LOGS,
       payload: data
     });
   } catch (err) {
