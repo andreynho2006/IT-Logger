@@ -74,17 +74,16 @@ export const updateLog = log => async dispatch => {
         'Content-Type': 'application/json'
       }
     });
-
     const data = await res.json();
-
+    console.log(res);
     dispatch({
       type: UPDATE_LOG,
       payload: data
     });
-  } catch (err) {
+  } catch (error) {
     dispatch({
       type: LOGS_ERROR,
-      payload: err.response.data
+      payload: error.response.data
     });
   }
 };

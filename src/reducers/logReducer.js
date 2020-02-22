@@ -59,8 +59,9 @@ export default (state = initialState, action) => {
       };
     case UPDATE_LOG:
       return {
-        ...state.logs.map(
-          log => (log.id = action.paylload.id ? action.payload : log)
+        ...state,
+        logs: state.logs.map(
+          log => (log.id = action.payload.id ? action.payload : log)
         )
       };
     default:
