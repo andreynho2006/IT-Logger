@@ -40,7 +40,7 @@ export const deleteTech = id => async dispatch => {
   } catch (err) {
     dispatch({
       type: TECHS_ERROR,
-      payload: err
+      payload: err.response.data
     });
   }
 };
