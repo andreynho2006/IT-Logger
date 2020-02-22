@@ -1,32 +1,11 @@
 {
   "logs": [
     {
-      "message": "Change network card on server 003",
-      "attention": true,
-      "tech": "Jon Doe",
-      "date": "2020-02-21T21:27:29.840Z",
-      "id": 1
-    },
-    {
       "message": "Wireless down",
       "attention": false,
       "tech": "Sara Wilson",
       "date": "2020-02-21T21:27:48.822Z",
       "id": 2
-    },
-    {
-      "message": "Wireless down need repair",
-      "attention": true,
-      "tech": "Sam Smith",
-      "date": "2020-02-21T21:28:08.987Z",
-      "id": 3
-    },
-    {
-      "message": "system down",
-      "attention": true,
-      "tech": "Jon Doe",
-      "date": "2020-02-22T08:29:58.020Z",
-      "id": 4
     }
   ],
   "techs": [
