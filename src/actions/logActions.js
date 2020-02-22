@@ -5,7 +5,8 @@ import {
   ADD_LOG,
   DELETE_LOGS,
   SET_CURRENT,
-  CLEAR_CURRENT
+  CLEAR_CURRENT,
+  UPDATE_LOG
 } from './types';
 
 // export const getLogs = () => {
@@ -52,6 +53,31 @@ export const deleteLog = id => async dispatch => {
     dispatch({
       type: DELETE_LOGS,
       payload: id
+    });
+  } catch (err) {
+    dispatch({
+      type: LOGS_ERROR,
+      payload: err.response.data
+    });
+  }
+};
+
+// update log on server
+export const updateLog = log => async dispatch => {
+  try {
+    setLoading();
+
+    const data = await fetch(`/logs/${log.id}`, {
+      method: 'PUT',
+      body: JSON.stringify(log),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    dispatch({
+      type: UPDATE_LOG,
+      payload: data
     });
   } catch (err) {
     dispatch({
