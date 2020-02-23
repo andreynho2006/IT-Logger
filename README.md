@@ -1,8 +1,11 @@
 ### IT- Logger
-Clone the project
-git clone https://github.com/andreynho2006/it-logger.git
 
-run
+Clone the project:
+
+### `git clone https://github.com/andreynho2006/it-logger.git`
+
+Run
+
 ### `npm install`
 
 In the project directory, run:
